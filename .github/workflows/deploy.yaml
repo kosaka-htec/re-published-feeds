@@ -5,6 +5,13 @@ on:
   push:
     branches:
       - main
+  schedule:
+    - cron: '0 0 * * 1'
+      #              ^- 曜日 -> 月曜日
+      #            ^- 月
+      #          ^- 日
+      #        ^- 時 -> 日本時間でちょうど午前9時
+      #      ^- 分
 
 jobs:
   build:
